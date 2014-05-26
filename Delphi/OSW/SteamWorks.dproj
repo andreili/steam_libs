@@ -1,0 +1,228 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{F2185826-96B2-47F1-BB70-056E7B03E0DD}</ProjectGuid>
+			<MainSource>SteamWorks.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DcuOutput>dcu</DCC_DcuOutput>
+			<DCC_E>false</DCC_E>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_DependencyCheckOutputName>SteamWorks.dll</DCC_DependencyCheckOutputName>
+			<DCC_S>false</DCC_S>
+			<GenDll>true</GenDll>
+			<DCC_N>false</DCC_N>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="SteamWorks.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="FriendsCommon.pas"/>
+			<DCCReference Include="UtilsCommon.pas"/>
+			<DCCReference Include="AppsCommon.pas"/>
+			<DCCReference Include="BillingCommon.pas"/>
+			<DCCReference Include="GameCoordinatorCommon.pas"/>
+			<DCCReference Include="RemoteStorageCommon.pas"/>
+			<DCCReference Include="GameServerItemsCommon.pas"/>
+			<DCCReference Include="UserItemsCommon.pas"/>
+			<DCCReference Include="GameServerStatsCommon.pas"/>
+			<DCCReference Include="GameStatsCommon.pas"/>
+			<DCCReference Include="GameServerCommon.pas"/>
+			<DCCReference Include="MatchmakingCommon.pas"/>
+			<DCCReference Include="MatchmakingServersCommon.pas"/>
+			<DCCReference Include="NetworkingCommon.pas"/>
+			<DCCReference Include="UserStatsCommon.pas"/>
+			<DCCReference Include="UserCommon.pas"/>
+			<DCCReference Include="IClientAppManager_.pas"/>
+			<DCCReference Include="IClientApps_.pas"/>
+			<DCCReference Include="IClientBilling_.pas"/>
+			<DCCReference Include="IClientConfigStore_.pas"/>
+			<DCCReference Include="IClientContentServer_.pas"/>
+			<DCCReference Include="ContentServerCommon.pas"/>
+			<DCCReference Include="IClientDepotBuilder_.pas"/>
+			<DCCReference Include="IClientEngine_.pas"/>
+			<DCCReference Include="IClientGameCoordinator_.pas"/>
+			<DCCReference Include="IClientFriends_.pas"/>
+			<DCCReference Include="IClientGameStats_.pas"/>
+			<DCCReference Include="IClientGameServer_.pas"/>
+			<DCCReference Include="IClientHTTP_.pas"/>
+			<DCCReference Include="IClientNetworking_.pas"/>
+			<DCCReference Include="IClientMatchmaking_.pas"/>
+			<DCCReference Include="IClientRemoteStorage_.pas"/>
+			<DCCReference Include="IClientUser_.pas"/>
+			<DCCReference Include="IClientUserStats_.pas"/>
+			<DCCReference Include="IClientUtils_.pas"/>
+			<DCCReference Include="Interface_OSW.pas"/>
+			<DCCReference Include="Win32Library.pas"/>
+			<DCCReference Include="ISteam2Bridge001_.pas"/>
+			<DCCReference Include="BridgeCommon.pas"/>
+			<DCCReference Include="ISteam2Bridge002_.pas"/>
+			<DCCReference Include="ISteam003_.pas"/>
+			<DCCReference Include="ISteam004_.pas"/>
+			<DCCReference Include="ISteam005_.pas"/>
+			<DCCReference Include="ISteam006_.pas"/>
+			<DCCReference Include="ISteamApps001_.pas"/>
+			<DCCReference Include="ISteamApps002_.pas"/>
+			<DCCReference Include="ISteamApps003_.pas"/>
+			<DCCReference Include="ISteamAppTicket001_.pas"/>
+			<DCCReference Include="ISteamBilling001_.pas"/>
+			<DCCReference Include="ISteamClient006_.pas"/>
+			<DCCReference Include="ISteam\Client\ISteamClient007_.pas"/>
+			<DCCReference Include="ISteam\Client\ISteamClient008_.pas"/>
+			<DCCReference Include="ISteam\Client\ISteamClient009_.pas"/>
+			<DCCReference Include="ISteam\ContentServer\ISteamContentServer001_.pas"/>
+			<DCCReference Include="ISteam\ContentServer\ISteamContentServer002_.pas"/>
+			<DCCReference Include="ISteam\Friends\ISteamFriends001_.pas"/>
+			<DCCReference Include="ISteam\Friends\ISteamFriends002_.pas"/>
+			<DCCReference Include="ISteam\Friends\ISteamFriends003_.pas"/>
+			<DCCReference Include="ISteam\Friends\ISteamFriends004_.pas"/>
+			<DCCReference Include="ISteam\Friends\ISteamFriends005_.pas"/>
+			<DCCReference Include="ISteam\Friends\ISteamFriends006_.pas"/>
+			<DCCReference Include="ISteam\Friends\ISteamFriends007_.pas"/>
+			<DCCReference Include="ISteam\ISteamGameCoordinator001_.pas"/>
+			<DCCReference Include="ISteam\GameServer\ISteamGameServer002_.pas"/>
+			<DCCReference Include="ISteam\GameServer\ISteamGameServer003_.pas"/>
+			<DCCReference Include="ISteam\GameServer\ISteamGameServer004_.pas"/>
+			<DCCReference Include="ISteam\GameServer\ISteamGameServer005_.pas"/>
+			<DCCReference Include="ISteam\GameServer\ISteamGameServer006_.pas"/>
+			<DCCReference Include="ISteam\GameServer\ISteamGameServer007_.pas"/>
+			<DCCReference Include="ISteam\GameServer\ISteamGameServer008_.pas"/>
+			<DCCReference Include="ISteam\GameServer\ISteamGameServer009_.pas"/>
+			<DCCReference Include="ISteam\GameServer\ISteamGameServer010_.pas"/>
+			<DCCReference Include="ISteam\GameServerItems\ISteamGameServerItems002_.pas"/>
+			<DCCReference Include="ISteam\GameServerItems\ISteamGameServerItems003_.pas"/>
+			<DCCReference Include="ISteam\GameServerItems\ISteamGameServerItems004_.pas"/>
+			<DCCReference Include="ISteam\ISteamGameServerStats001_.pas"/>
+			<DCCReference Include="ISteam\ISteamGameStats001_.pas"/>
+			<DCCReference Include="ISteam\Matchmaking\ISteamMatchmaking001_.pas"/>
+			<DCCReference Include="ISteam\Matchmaking\ISteamMatchmaking002_.pas"/>
+			<DCCReference Include="ISteam\Matchmaking\ISteamMatchmaking003_.pas"/>
+			<DCCReference Include="ISteam\Matchmaking\ISteamMatchmaking004_.pas"/>
+			<DCCReference Include="ISteam\Matchmaking\ISteamMatchmaking005_.pas"/>
+			<DCCReference Include="ISteam\Matchmaking\ISteamMatchmaking006_.pas"/>
+			<DCCReference Include="ISteam\Matchmaking\ISteamMatchmaking007_.pas"/>
+			<DCCReference Include="ISteam\Matchmaking\ISteamMatchmaking008_.pas"/>
+			<DCCReference Include="ISteam\MatchmakingServers\ISteamMatchmakingServers001_.pas"/>
+			<DCCReference Include="ISteam\MatchmakingServers\ISteamMatchmakingServers002_.pas"/>
+			<DCCReference Include="ISteam\Networking\ISteamNetworking001_.pas"/>
+			<DCCReference Include="ISteam\Networking\ISteamNetworking002_.pas"/>
+			<DCCReference Include="ISteam\Networking\ISteamNetworking003_.pas"/>
+			<DCCReference Include="ISteam\Networking\ISteamNetworking004_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser004_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser005_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser006_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser007_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser008_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser009_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser010_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser011_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser012_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser013_.pas"/>
+			<DCCReference Include="ISteam\User\ISteamUser014_.pas"/>
+			<DCCReference Include="ISteam\UserItems\ISteamUserItems001_.pas"/>
+			<DCCReference Include="ISteam\UserItems\ISteamUserItems002_.pas"/>
+			<DCCReference Include="ISteam\UserItems\ISteamUserItems003_.pas"/>
+			<DCCReference Include="ISteam\UserItems\ISteamUserItems004_.pas"/>
+			<DCCReference Include="ISteam\UserStats\ISteamUserStats001_.pas"/>
+			<DCCReference Include="ISteam\UserStats\ISteamUserStats002_.pas"/>
+			<DCCReference Include="ISteam\UserStats\ISteamUserStats003_.pas"/>
+			<DCCReference Include="ISteam\UserStats\ISteamUserStats004_.pas"/>
+			<DCCReference Include="ISteam\UserStats\ISteamUserStats005_.pas"/>
+			<DCCReference Include="ISteam\UserStats\ISteamUserStats006_.pas"/>
+			<DCCReference Include="ISteam\UserStats\ISteamUserStats007_.pas"/>
+			<DCCReference Include="ISteam\Utils\ISteamUtils001_.pas"/>
+			<DCCReference Include="ISteam\Utils\ISteamUtils002_.pas"/>
+			<DCCReference Include="ISteam\Utils\ISteamUtils003_.pas"/>
+			<DCCReference Include="ISteam\Utils\ISteamUtils004_.pas"/>
+			<DCCReference Include="ISteam\Utils\ISteamUtils005_.pas"/>
+			<DCCReference Include="ISteam\ISteamMasterServerUpdater001_.pas"/>
+			<DCCReference Include="MasterServerUpdaterCommon.pas"/>
+			<DCCReference Include="ISteam\Billing\ISteamBilling002_.pas"/>
+			<DCCReference Include="ISteam\RemoteStorage\ISteamRemoteStorage001_.pas"/>
+			<DCCReference Include="ISteam\RemoteStorage\ISteamRemoteStorage002_.pas"/>
+			<DCCReference Include="SteamClientLib.pas"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">SteamWorks.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1049</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
