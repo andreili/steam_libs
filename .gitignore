@@ -19,3 +19,9 @@
 *.exe
 *.out
 *.app
+
+# Delphi compiled units
+*.dcu
+
+# Delphi history folder
+__history
